@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorDarkText">#1d1919</color>
+    <color name="colorLightText">#463c3c</color>
+    <drawable name="clr_normal">#1f000000</drawable>
+    <drawable name="clr_pressed">#005da4</drawable>
+    <color name="colorButton">#66ccff</color>
+    <color name="colorDeepRed">#6c0124</color>
+    <color name="colorBrown">#492c2c</color>
+    <color name="colorDeepBlue">#264c72</color>
+    <color name="colorMessageRadioButtonChecked">#6E6363</color>
+    <color name="colorGray">#f1f0f0</color>
+</resources>
