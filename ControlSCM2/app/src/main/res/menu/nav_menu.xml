@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_call"
+            android:icon="@android:drawable/ic_menu_call"
+            android:title="Call"/>
+        <item
+            android:id="@+id/nav_friends"
+            android:icon="@android:drawable/ic_menu_my_calendar"
+            android:title="Friends"/>
+        <item
+            android:id="@+id/nav_location"
+            android:icon="@android:drawable/ic_menu_send"
+            android:title="Location"/>
+        <item
+            android:id="@+id/nav_mail"
+            android:icon="@android:drawable/ic_menu_share"
+            android:title="Mail"/>
+        <item
+            android:id="@+id/nav_task"
+            android:icon="@android:drawable/ic_menu_recent_history"
+            android:title="Tasks"/>
+    </group>
+
+</menu>
