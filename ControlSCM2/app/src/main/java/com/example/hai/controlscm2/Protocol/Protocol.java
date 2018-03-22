@@ -277,8 +277,11 @@ public class Protocol {
 				// 报文序列号超出最大值
 			}
 
+			
+
 			ByteArrayOutputStream baos = new ByteArrayOutputStream();
 			DataOutputStream headSB = new DataOutputStream(baos);
+
 
 			try {
 				headSB.writeByte(OPVULTEKEN);//加入前导符
