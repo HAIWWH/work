@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="horizontal"
+    android:padding="5dp"
+android:layout_width="match_parent"
+android:layout_height="wrap_content">
+<ImageView
+    android:id="@+id/contact_picture"
+    android:src="@drawable/ic_qr_code"
+    android:layout_width="46dp"
+    android:layout_height="32dp" />
+<TextView
+    android:id="@+id/power"
+    android:text="权限"
+    android:textSize="20sp"
+    android:layout_marginLeft="20dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+<TextView
+    android:id="@+id/time"
+    android:text="时间"
+    android:layout_marginLeft="20dp"
+    android:textSize="20sp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+<TextView
+    android:id="@+id/load"
+    android:text="登陆状态"
+    android:layout_marginLeft="30dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+</LinearLayout>
+

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <app.cddic.com.smarter.widget.TopView
+        android:id="@+id/topView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></app.cddic.com.smarter.widget.TopView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="#264c72"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/avatar" />
+
+        <TextView
+            android:id="@+id/userName_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="名称：张师傅"
+            android:textColor="#FFFFFF"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/userType_textView"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/users_background"
+            android:gravity="center"
+            android:text="一般用户"
+            android:textColor="#850000"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/setbar_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/userSex_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/setbar_bg"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="性别： 男"
+            android:textColor="@color/colorDarkText"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/userAccount_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/setbar_bg"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="用户账号：20141215414"
+            android:textColor="@color/colorDarkText"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/registrationTime_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/setbar_bg"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="注册时间：2012/02/02"
+            android:textColor="@color/colorDarkText"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/state_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/setbar_bg"
+            android:drawableRight="@drawable/ic_edit"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="当前状态：在线"
+            android:textColor="@color/colorDarkText"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/changePassword_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/setbar_bg"
+            android:drawableRight="@drawable/ic_edit"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="@string/changePassword"
+            android:textColor="@color/colorDarkText"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/mailBox_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/setbar_bg"
+            android:drawableRight="@drawable/ic_edit"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="邮箱:978029808@qq.com"
+            android:textColor="@color/colorDarkText"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/QRCode_imageView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="3"
+            android:background="@drawable/setbar_bg"
+            android:src="@drawable/ic_qr_code" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/message_radioGroup"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginBottom="10dp"
+    android:layout_marginEnd="35dp"
+    android:layout_marginStart="35dp"
+    android:layout_marginTop="5dp"
+    android:background="@drawable/message_radio_group"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <RadioButton
+        android:id="@+id/alarm_radioButton"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/alarm_selector"
+        android:button="@null"
+        android:gravity="center"
+        android:text="@string/alarm"/>
+
+    <RadioButton
+        android:id="@+id/inform_radioButton"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/inform_selector"
+        android:button="@null"
+        android:checked="true"
+        android:gravity="center"
+        android:text="@string/inform"/>
+
+    <RadioButton
+        android:id="@+id/chat_radioButton"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/chat_selector"
+        android:button="@null"
+        android:gravity="center"
+        android:text="@string/chat"/>
+
+</RadioGroup>

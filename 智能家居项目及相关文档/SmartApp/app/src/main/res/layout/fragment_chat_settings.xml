@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <app.cddic.com.smarter.widget.TopView
+        android:id="@+id/chatSetting_topView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/app_list_corner_round"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/ic_contact"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginLeft="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/contactName_tv"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:text="@string/earliestChatTime">
+
+            </TextView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/chatLog_textView"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/app_list_corner_round_top"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:text="@string/chatLog">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/chatFile_textView"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/app_list_corner_round_bottom"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:text="@string/chatFile">
+
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/clearInformation_textView"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/app_list_corner_round_top"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:text="@string/emptyChatMessages"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/app_list_corner_round_bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:text="@string/shieldThisPerson"
+                />
+
+            <Switch
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/deleteContact_button"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/app_list_corner_round"
+        android:gravity="center"
+        android:text="删除联系人"/>
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <app.cddic.com.smarter.widget.TopView
+        android:id="@+id/findKey_topView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/Id"
+    android:textSize="16sp"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="20dp"/>
+
+    <EditText
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="@drawable/setbar_bg"
+    android:layout_marginTop="20dp"
+    android:hint="@string/pleaseInputId"
+    android:gravity="center"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cellphoneNumber"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="16sp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/setbar_bg"
+        android:hint="@string/pleaseInputPhoneNumber"
+        android:layout_marginTop="20dp"
+        android:gravity="center"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/identifyingCode"
+            android:layout_marginLeft="20dp"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/setbar_bg"
+            android:hint="@string/clickInputIdentifyingCode"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/login_bn"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/colorButton"
+        android:text="@string/login"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        android:layout_marginTop="140dp"/>
+
+</LinearLayout>

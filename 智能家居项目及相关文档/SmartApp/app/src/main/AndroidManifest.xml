@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="app.cddic.com.smarter">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:name=".global.SmartApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- 启动页面 -->
+        <activity
+            android:name=".activity.base.SplashActivity"
+            android:theme="@style/NoActionBarFullScreen">
+        </activity>
+        <!-- 测试界面 -->
+        <activity android:name=".activity.base.TestActivity">
+        </activity>
+        <!-- 主界面 -->
+        <activity
+            android:name=".activity.base.LoginActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- 注册界面 -->
+        <activity
+            android:name=".activity.base.RegisterActivity"
+            android:theme="@style/NoActionBarFullScreen"/>
+        <!-- 引导页 -->
+        <activity android:name=".activity.base.GuideActivity"/>
+        <!-- 我的设置 -->
+        <activity android:name=".activity.base.SettingActivity"/>
+        <activity android:name=".activity.base.MainActivity"/>
+        <activity android:name=".activity.base.ContactActivity"/>
+        <activity android:name=".activity.base.DrawerActivity"/>
+        <activity android:name=".activity.base.DeviceActivity"/>
+        <activity android:name=".activity.base.DeviceDetailActivity"/>
+        <activity android:name=".activity.base.SearchViewActivity"/>
+        <activity android:name=".activity.base.MessageActivity"/>
+
+        <!-- 服务 -->
+        <service android:name=".service.SmartService"/>
+
+        <activity android:name=".activity.base.ChangePasswordActivity"/>
+        <activity android:name=".activity.base.DeviceLoginActivity">
+        </activity>
+        <activity android:name=".activity.base.DeviceTestActivity">
+        </activity>
+    </application>
+
+</manifest>

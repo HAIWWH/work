@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="用户登录"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="24sp"
+        android:textStyle="normal|bold" />
+
+    <TableLayout
+        android:id="@+id/TableLayout01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="登录账号:  " />
+
+            <EditText
+                android:id="@+id/input_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="input username    " />
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/TableLayout02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="登录密码:  " />
+
+            <EditText
+                android:id="@+id/input_pass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="input password"
+                android:inputType="textPassword" />
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/login_plat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="登录平台" />
+
+    <Button
+        android:id="@+id/lan_find"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="局域网发现" />
+
+    <Button
+        android:id="@+id/login_dev"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="登录设备" />
+
+    <Button
+        android:id="@+id/file_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发送文件" />
+
+    <Button
+        android:id="@+id/app_exit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="退出" />
+
+    <TextView
+        android:id="@+id/show_devinf"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="发现的前端设备：" />
+</LinearLayout>
+

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottomBar_RadioGroup"
+    android:layout_width="match_parent"
+    android:layout_height="65dp"
+    android:background="@color/colorPrimary"
+    android:orientation="horizontal">
+
+    <RadioButton
+        android:id="@+id/device_radioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:button="@null"
+        android:drawableTop="@mipmap/ic_device"
+        android:gravity="center"
+        android:text="@string/device"
+        android:textColor="#fff"/>
+
+    <RadioButton
+        android:id="@+id/contact_radioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:button="@null"
+        android:drawableTop="@mipmap/ic_contact"
+        android:gravity="center"
+        android:text="@string/contact"
+        android:textColor="#fff"/>
+
+    <RadioButton
+        android:id="@+id/message_radioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:button="@null"
+        android:drawableTop="@mipmap/ic_message"
+        android:gravity="center"
+        android:text="@string/message"
+        android:textColor="#fff"/>
+
+</RadioGroup>

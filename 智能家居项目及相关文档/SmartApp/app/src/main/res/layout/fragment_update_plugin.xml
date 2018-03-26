@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/colorGray"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <app.cddic.com.smarter.widget.TopView
+        android:id="@+id/updatePlugin_topView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </app.cddic.com.smarter.widget.TopView>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="20dp" />
+    <LinearLayout
+        android:background="@drawable/setbar_bg"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="@string/support_deviceName"
+            android:textSize="20sp"
+            android:padding="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Space
+            android:layout_width="50dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/updatePlugin_deviceName_textView"
+            android:text="@string/support_device"
+            android:textSize="20sp"
+            android:padding="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="@drawable/setbar_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="@string/nowPlugin"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Space
+            android:layout_width="50dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/updatePlugin_plugin_textView"
+            android:text="________"
+            android:textSize="20sp"
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Space
+            android:layout_width="30dp"
+            android:layout_height="wrap_content" />
+        <ImageButton
+            android:id="@+id/updatePlugin_delPlugin_btn"
+            android:src="@drawable/arrow_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="40dp" />
+    <LinearLayout
+        android:background="@drawable/setbar_bg"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="已有新版本：v2.30"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:layout_marginLeft="95dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="60dp" />
+
+        <Button
+            android:id="@+id/updatePlugin_updateNow_btn"
+            android:layout_width="209dp"
+            android:background="#47b0f6"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="90dp"
+            android:text="@string/nowUpdate" />
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+    </LinearLayout>
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="20dp" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/updatePlugin_updateMessage_textView"
+            android:text="@string/mainUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/elvList_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:drawableLeft="@android:drawable/arrow_down_float"
+        android:textSize="16sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/authority"
+        android:layout_marginTop="20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/remoteLogin"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="25dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/loginTime"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="26dp"/>
+
+    <TextView
+        android:id="@+id/countCorrelation_textView"
+        android:layout_width="wrap_content"
+        android:paddingRight="15dp"
+        android:textSize="16sp"
+        android:layout_height="wrap_content" />
+</LinearLayout>

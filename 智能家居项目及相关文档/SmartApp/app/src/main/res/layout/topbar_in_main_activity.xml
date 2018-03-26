@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="?attr/colorPrimary">
+
+    <ImageView
+        android:id="@+id/userAvatarOnTopBar_ImageView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:contentDescription="@string/des_userAvatar"
+        android:src="@drawable/avatar"/>
+
+    <ImageView
+        android:id="@+id/more_imageView"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignBaseline="@id/userAvatarOnTopBar_ImageView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="5dp"
+        android:src="@mipmap/ic_more"/>
+    <ImageView
+        android:id="@+id/status_imv"
+        android:layout_width="25dp"
+        android:layout_height="35dp"
+        android:layout_alignRight="@id/more_imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="60dp"
+        android:src="@drawable/device"/>
+
+
+    <TextView
+        android:id="@+id/currentFragmentName_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignBaseline="@id/userAvatarOnTopBar_ImageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:textSize="20sp"/>
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/userAvatarOnTopBar_ImageView"
+        android:focusable="false"
+        android:gravity="center_vertical"
+        android:iconifiedByDefault="false"
+        android:textSize="18sp"/>
+
+</RelativeLayout>

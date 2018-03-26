@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<app.cddic.com.smarter.widget.TopView
+    android:id="@+id/conditional_search_TopView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"></app.cddic.com.smarter.widget.TopView>
+
+    <SearchView
+        android:src="@drawable/setbar_bg"
+        android:id="@+id/conditional_search_SearchView"
+        android:text="昵称/关键词"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></SearchView>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="23dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/public_security_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.33"
+            android:background="@drawable/point"
+            android:text="保安" />
+
+        <Button
+            android:id="@+id/tenement_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.35"
+            android:background="@drawable/point"
+            android:text="物业" />
+
+        <Button
+            android:id="@+id/unlimited_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/point"
+            android:text="不限"
+            android:layout_weight="0.31" />
+    </LinearLayout>
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="30dp" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:src="@drawable/setbar_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="职业"
+                android:textSize="20dp"
+                android:padding="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <ImageButton
+                android:id="@+id/profession_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="250dp"
+                android:src="@drawable/arrow_right" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:src="@drawable/setbar_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="所在地"
+                android:textSize="20dp"
+                android:padding="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <ImageButton
+                android:id="@+id/location_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="230dp"
+                android:src="@drawable/arrow_right" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:src="@drawable/setbar_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="年龄"
+                android:textSize="20dp"
+                android:padding="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <ImageButton
+                android:id="@+id/age_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="250dp"
+                android:src="@drawable/arrow_right" />
+        </LinearLayout>
+
+         <Space
+                android:layout_width="match_parent"
+                android:layout_height="48dp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="321dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="?attr/colorControlHighlight"
+            android:text="查找"
+            android:textSize="20dp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+<EditText
+    android:id="@+id/edit_dialog_group_manage"
+    android:layout_width="300dp"
+    android:layout_height="40dp"
+    android:background="@drawable/setbar_bg"
+    android:layout_gravity="center"
+    android:textSize="14sp"
+    android:textColor="#000000"/>
+</LinearLayout>

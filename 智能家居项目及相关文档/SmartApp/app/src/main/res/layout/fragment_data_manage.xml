@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/setbar_bg"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/downloadAlarmAttachments"
+                android:textSize="18sp"/>
+
+            <Switch
+                android:id="@+id/downloadAlarm_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:thumb="@drawable/thumb"
+                android:track="@drawable/track"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/setbar_bg"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/autoUpdatePlugin"
+                android:textSize="18sp"/>
+
+            <Switch
+                android:id="@+id/updatePlugin_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:thumb="@drawable/thumb"
+                android:track="@drawable/track"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/setbar_bg"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/autoUpgrade"
+                android:textSize="18sp"/>
+
+            <Switch
+                android:id="@+id/autoUpdate_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:thumb="@drawable/thumb"
+                android:track="@drawable/track"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="@drawable/setbar_bg">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/seeMovie"
+                android:textSize="18sp"/>
+
+            <Switch
+                android:id="@+id/seeMovie_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:thumb="@drawable/thumb"
+                android:track="@drawable/track"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="@drawable/setbar_bg">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/autoFindNewDevice"
+                android:textSize="18sp"/>
+
+            <Switch
+                android:id="@+id/findNewDevice_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:thumb="@drawable/thumb"
+                android:track="@drawable/track"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

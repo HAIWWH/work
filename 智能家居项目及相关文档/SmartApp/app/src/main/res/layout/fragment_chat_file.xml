@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <app.cddic.com.smarter.widget.TopView
+        android:id="@+id/chatFile_topView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TabHost
+        android:id="@+id/chatFile_tabHost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#e4e4e4">
+                <!--图片/视频-->
+                <LinearLayout
+                    android:id="@+id/PicturesOrVideo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="4dp"
+                        android:padding="10dp"
+                        android:text="七天内"/>
+                    <TableLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp">
+                        <TableRow>
+                            <ImageView
+                                android:layout_marginLeft="40dp"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@drawable/ic_contact"
+                                />
+                            <ImageView
+                                android:layout_marginLeft="45dp"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@drawable/ic_contact"
+                                />
+                            <ImageView
+                                android:layout_marginLeft="45dp"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@drawable/ic_contact"
+                                />
+                        </TableRow>
+                        <TableRow
+                            android:layout_marginTop="20dp"
+                            >
+                            <ImageView
+                                android:layout_marginLeft="40dp"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@drawable/ic_contact"
+                                />
+                            <ImageView
+                                android:layout_marginLeft="45dp"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@drawable/ic_contact"
+                                />
+
+                            />
+                        </TableRow>
+                    </TableLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="4dp"
+                        android:padding="10dp"
+                        android:text="2016年10月"/>
+                    <TableLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp">
+                        <TableRow>
+                            <ImageView
+                                android:layout_marginLeft="40dp"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@drawable/ic_contact"
+                                />
+
+                            <ImageView
+                                android:layout_marginLeft="45dp"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@drawable/ic_contact"
+                                android:id="@+id/imageView2" />
+
+                            <ImageView
+                                android:layout_marginLeft="45dp"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@drawable/ic_contact"
+                                />
+                        </TableRow>
+                        <TableRow
+                            android:layout_marginTop="20dp"
+                            >
+                            <ImageView
+                                android:layout_marginLeft="40dp"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@drawable/ic_contact"
+                                />
+                            <ImageView
+                                android:layout_marginLeft="45dp"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@drawable/ic_contact"
+                                />
+                        </TableRow>
+                    </TableLayout>
+
+                </LinearLayout>
+                <!--衔接-->
+
+
+                <LinearLayout
+                    android:id="@+id/join"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="衔接"
+                        android:gravity="center"
+                        />
+
+                </LinearLayout>
+
+
+                <!--其他-->
+                <LinearLayout
+                    android:id="@+id/other"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="其他"
+                        android:gravity="center"
+                        />
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+</LinearLayout>

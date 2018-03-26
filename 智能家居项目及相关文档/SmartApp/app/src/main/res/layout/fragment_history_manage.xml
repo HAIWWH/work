@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/setbar_bg"
+            android:drawableRight="@drawable/ic_right_arrow"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:text="@string/exportAllMsg"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/setbar_bg"
+            android:drawableRight="@drawable/ic_right_arrow"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:text="@string/emptyAllNotificationMsg"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/setbar_bg"
+            android:drawableRight="@drawable/ic_right_arrow"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:text="@string/emptyAllAnnouncementMsg"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/setbar_bg"
+            android:drawableRight="@drawable/ic_right_arrow"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:text="@string/emptyAllChatMsg"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/setbar_bg"
+            android:drawableRight="@drawable/ic_right_arrow"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:text="@string/emptyAllAlarmMsg"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/setbar_bg"
+            android:drawableRight="@drawable/ic_right_arrow"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:text="@string/emptyAllMsgRecords"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/setbar_bg"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:text="@string/maximumCollectionRecord"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="23dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/setbar_bg"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@color/colorBrown"
+            android:gravity="right"
+            android:text="可用3"
+            android:textColor="@android:color/background_light"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorMessageRadioButtonChecked"
+            android:text="6M/共50M"
+            android:textColor="@android:color/background_light"
+            android:textSize="16dp"/>
+    </LinearLayout>
+</LinearLayout>

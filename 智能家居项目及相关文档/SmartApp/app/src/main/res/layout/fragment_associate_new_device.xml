@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <app.cddic.com.smarter.widget.TopView
+        android:id="@+id/associateDevice_topView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </app.cddic.com.smarter.widget.TopView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/setbar3"
+                android:gravity="center"
+                android:text="@string/deviceName"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/deviceName_editText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/chat_edit_text"
+                android:layout_marginRight="20dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/setbar3"
+                android:gravity="center"
+                android:text="@string/deviceIdentifier"
+                android:layout_marginLeft="20dp"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/deviceIdentifier_editText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/chat_edit_text"
+                android:layout_marginRight="20dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/setbar3"
+                android:gravity="center"
+                android:text="@string/deviceBarCode"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/deviceBarCode_editText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/chat_edit_text"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/setbar3"
+                android:gravity="center"
+                android:text="@string/ipAddress"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/ipLocation_editText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/chat_edit_text"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/message_radio_group"
+                android:gravity="center"
+                android:text="@string/deviceAlias"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/elseName_editText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/setbar_bg2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/message_radio_group"
+                android:gravity="center"
+                android:text="@string/loginAccountName"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/loginName_editText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/setbar_bg2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/message_radio_group"
+                android:gravity="center"
+                android:text="@string/logPassword"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/loginKey_editText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/setbar_bg2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/message_radio_group"
+                android:gravity="center"
+                android:text="@string/applyAuthority"
+                android:textSize="18sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/setbar_bg2">
+
+                <Spinner
+                    android:id="@+id/applyPower_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </Spinner>
+            </LinearLayout>
+
+    </LinearLayout>
+
+
+    </LinearLayout>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="50dp"
+    android:gravity="center">
+
+    <Button
+        android:id="@+id/cancel_btn"
+        android:layout_width="120dp"
+        android:layout_height="match_parent"
+        android:background="@android:color/holo_blue_dark"
+        android:text="@string/cancel"
+       android:layout_marginRight="55dp"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/apply_associate_btn"
+        android:layout_width="120dp"
+        android:layout_height="match_parent"
+        android:text="@string/applyAssociate"
+        android:textSize="18sp"
+        android:background="@android:color/holo_blue_dark"
+        android:textColor="@android:color/background_light"/>
+</LinearLayout>
+
+
+</LinearLayout>

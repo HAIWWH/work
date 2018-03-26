@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="titleTvInTopView" type="id"/>
+    <item name="rightBtnInTopView" type="id"/>
+    <item name="leftBtnInTopView" type="id"/>
+    <item name="rightIvInTopView" type="id"/>
+
+</resources>

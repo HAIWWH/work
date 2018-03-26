@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:id="@+id/item_linear"
+                  android:layout_width="match_parent"
+                  android:layout_height="60dp"
+                  android:gravity="center_vertical"
+                  android:orientation="horizontal"
+                  android:paddingLeft="5dp">
+
+        <ImageView
+            android:id="@+id/deviceIcon_imageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="?attr/colorPrimary"
+            android:contentDescription="@string/des_deviceIcon"
+            android:src="@mipmap/ic_device"/>
+        <TextView
+            android:id="@+id/deviceName_textView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="厨房设备"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:layout_marginRight="20dp"
+            android:textSize="18sp"/>
+        </LinearLayout>
+
+</LinearLayout>
