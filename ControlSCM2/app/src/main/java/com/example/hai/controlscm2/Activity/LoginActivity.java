@@ -1,13 +1,17 @@
 package com.example.hai.controlscm2.Activity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.hai.controlscm2.R;
 import com.example.hai.controlscm2.Service.LoginService;
@@ -55,6 +59,36 @@ public class LoginActivity extends AppCompatActivity {
                     intent.putExtra("IP",ipEt.getText());
                     intent.putExtra("por",mPort);
                     startService(intent);
+                }else{
+                    AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                    //    设置Title的图标
+                    builder.setIcon(R.drawable.ic_launcher_background);
+                    //    设置Title的内容
+                    builder.setTitle("弹出警告框");
+                    //    设置Content来显示一个信息
+                    builder.setMessage("IP和Pro不能为空！！！");
+                    //    设置一个PositiveButton
+                    builder.setPositiveButton("确定", new DialogInterface.OnClickListener()
+                    {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which)
+                        {
+
+                        }
+                    });
+                    //    设置一个NegativeButton
+                    builder.setNegativeButton("取消", new DialogInterface.OnClickListener()
+                    {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which)
+                        {
+
+                        }
+                    });
+                    //    设置一个NeutralButton
+
+                    //    显示出该对话框
+                    builder.show();
                 }
 
                 break;

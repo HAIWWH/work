@@ -24,7 +24,8 @@ public class LoginService extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
 
         ExecutorService exec = Executors.newCachedThreadPool();
-        udpClient = new UDPClient(1211,"ahah");
+        /*分别获得登录界面传来的ip和por*/
+        udpClient = new UDPClient(Integer.valueOf(intent.getStringExtra("por")),intent.getStringExtra("IP"));
         exec.execute(udpClient);
         return super.onStartCommand(intent, flags, startId);
     }
@@ -33,5 +34,11 @@ public class LoginService extends Service {
     public IBinder onBind(Intent intent) {
         // TODO: Return the communication channel to the service.
         throw new UnsupportedOperationException("Not yet implemented");
+    }
+
+    @Override
+    public void onDestroy() {
+        udpClient.setUdpLife(false);/*关闭线程生命因子*/
+        super.onDestroy();
     }
 }
