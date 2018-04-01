@@ -32,7 +32,7 @@ public class UDPClient implements Runnable {
 
     /*构造函数*/
     public UDPClient(int udpPort, String hostIp){
-        super();
+       // super();
         this.udpPort = udpPort;
         this.hostIp = hostIp;
 
@@ -83,7 +83,7 @@ public class UDPClient implements Runnable {
 
         try {
             socket = new DatagramSocket();
-            socket.setSoTimeout(3000);//设置超时为3s
+           // socket.setSoTimeout(3000);//设置超时为3s
         } catch (SocketException e) {
             Log.i("udpClient","建立接收数据报失败");
             e.printStackTrace();

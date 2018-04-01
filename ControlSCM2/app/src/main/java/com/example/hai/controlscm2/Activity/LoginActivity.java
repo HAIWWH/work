@@ -8,6 +8,7 @@ import android.preference.PreferenceManager;
 
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,8 +23,8 @@ import butterknife.OnClick;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private SharedPreferences mSpf;
-    private SharedPreferences.Editor mSpfE;
+   // private SharedPreferences mSpf = null;
+   // private SharedPreferences.Editor mSpfE;
 
 
     @BindView(R.id.ip_et)
@@ -37,7 +38,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        initView();
+       // initView();
         ButterKnife.bind(this);
     }
 
@@ -51,14 +52,24 @@ public class LoginActivity extends AppCompatActivity {
             case R.id.login_button:
                 if (!ipEt.getText().toString().isEmpty() && !porEt.getText().toString().isEmpty()) {
                     int mPort = Integer.parseInt(porEt.getText().toString());
-                    mSpfE = mSpf.edit();
-                    mSpfE.putString("ip",ipEt.getText().toString());
-                    mSpfE.putString("port",porEt.getText().toString());
-                    mSpfE.apply();
+//                    mSpfE = mSpf.edit();
+//                    mSpfE.putString("ip",ipEt.getText().toString());
+//                    mSpfE.putString("port",porEt.getText().toString());
+//                    mSpfE.apply();
                     Intent intent = new Intent(this, LoginService.class);
-                    intent.putExtra("IP",ipEt.getText());
-                    intent.putExtra("por",mPort);
+//                    intent.putExtra("IP",ipEt.getText());
+//                    intent.putExtra("por",mPort);
+                    intent.putExtra("IP","12323");
+                    intent.putExtra("por","122");
+                    Log.i("HAH","haai");
                     startService(intent);
+                    /*这里的条件需要设定*/
+                    Intent in = new Intent(this, MainActivity.class);
+                    in.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    Log.i("HAHHAH", "hahhah");
+                    this.startActivity(in);
+
+
                 }else{
                     AlertDialog.Builder builder = new AlertDialog.Builder(this);
                     //    设置Title的图标
@@ -96,9 +107,9 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     /*初始化控件*/
-    public void initView(){
-        mSpf = PreferenceManager.getDefaultSharedPreferences(this);
-        ipEt.setText(mSpf.getString("ip",""));
-        porEt.setText(mSpf.getString("port",""));
-    }
+//    public void initView(){
+//        mSpf = PreferenceManager.getDefaultSharedPreferences(this);
+//        ipEt.setText(mSpf.getString("ip",""));
+//        porEt.setText(mSpf.getString("port",""));
+//    }
 }
