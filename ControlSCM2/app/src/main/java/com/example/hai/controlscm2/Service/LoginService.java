@@ -3,7 +3,9 @@ package com.example.hai.controlscm2.Service;
 import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
+import android.util.Log;
 
+import com.example.hai.controlscm2.Activity.MainActivity;
 import com.example.hai.controlscm2.UDP.UDPClient;
 
 import java.util.concurrent.ExecutorService;
@@ -22,10 +24,27 @@ public class LoginService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+        try {
 
-        ExecutorService exec = Executors.newCachedThreadPool();
-        udpClient = new UDPClient(1211,"ahah");
-        exec.execute(udpClient);
+
+
+
+            /*分别获得登录界面传来的ip和por*/
+            int por = Integer.valueOf(intent.getStringExtra("por"));
+            String ip = intent.getStringExtra("IP");
+            udpClient = new UDPClient(por,ip);
+            Log.i("HAHHAH", "lalall");
+
+            Thread thread = new Thread(udpClient);
+            thread.start();
+
+        }catch (Exception e){
+
+        }finally {
+
+
+        }
+
         return super.onStartCommand(intent, flags, startId);
     }
 
@@ -33,5 +52,16 @@ public class LoginService extends Service {
     public IBinder onBind(Intent intent) {
         // TODO: Return the communication channel to the service.
         throw new UnsupportedOperationException("Not yet implemented");
+    }
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+    }
+
+    @Override
+    public void onDestroy() {
+        udpClient.setUdpLife(false);/*关闭线程生命因子*/
+        super.onDestroy();
     }
 }
