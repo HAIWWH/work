@@ -1,11 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
     <TextView
+        android:paddingLeft="20dp"
+        android:layout_marginTop="80dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="222222"
+        android:layout_height="wrap_content"
+        android:text="测距传感器"
+        android:textSize="20dip"
+        />
+    <TextView
+        android:paddingTop="5dp"
+        android:paddingLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dip"
+        android:text="亮度传感器"
+        />
+    <TextView
+        android:paddingTop="5dp"
+        android:paddingLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dip"
+        android:text="烟雾传感器"
+        />
+    <TextView
+        android:paddingTop="5dp"
+        android:paddingLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dip"
+        android:text="温度传感器"
         />
 
 </LinearLayout>
