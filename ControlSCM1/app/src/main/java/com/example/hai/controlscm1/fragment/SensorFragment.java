@@ -204,17 +204,17 @@ public class SensorFragment extends Fragment {
     }
 
      public void sendSensor(final byte[] masg){
-           new Thread(new Runnable() {
-             @Override
-             public void run() {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
                 // Message message = new Message();
-                 if (masg.length!=0){
-                     Log.i("udpClient",masg.toString());
-                     clientSensor.send(masg);
-                      }
-             }
-         }).start();
-     }
+                if (masg.length!=0){
+                    Log.i("udpClient",masg.toString());
+                    clientSensor.send(masg);
+                }
+            }
+        }).start();
+    }
 
 
     //更新界面

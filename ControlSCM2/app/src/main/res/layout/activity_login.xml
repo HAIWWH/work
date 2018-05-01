@@ -2,22 +2,25 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/app_list_corner"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_marginTop="80dp"
+        android:layout_marginLeft="3dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/app_list_corner_albi_round"
         android:orientation="horizontal">
         <TextView
             android:paddingLeft="20dp"
             android:layout_width="80dp"
             android:layout_height="40dp"
             android:text="IP:"
-            android:background="#aaa"
-            android:textSize="25sp"/>
+            android:textSize="20sp"/>
         <EditText
             android:id="@+id/ip_et"
+            android:layout_marginLeft="1dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>
@@ -26,16 +29,18 @@
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/app_list_corner_albi_round"
+        android:layout_marginLeft="3dp"
         android:orientation="horizontal">
         <TextView
             android:paddingLeft="10dp"
             android:layout_width="80dp"
             android:layout_height="40dp"
             android:text="POR:"
-            android:background="#aaa"
-            android:textSize="25sp"/>
+            android:textSize="20sp"/>
         <EditText
             android:id="@+id/por_et"
+            android:layout_marginLeft="1dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>
@@ -44,9 +49,10 @@
         android:layout_marginTop="20dp"
         android:layout_gravity="center"
         android:layout_width="300dp"
-        android:layout_height="60dp"
-        android:text="登录"
-        android:textSize="30dip"
+        android:layout_height="wrap_content"
+        android:background="@drawable/app_list_corner_albi_round"
+        android:text="连   接"
+        android:textSize="20dip"
         />
 
 </LinearLayout>

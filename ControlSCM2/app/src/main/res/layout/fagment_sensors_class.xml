@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ABE3FF"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/range_finding_bt"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:paddingLeft="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textSize="25dip"
+        android:background="@drawable/app_list_corner_round"
+        android:text="测 距 传 感 器"
+        android:gravity="center"
+        />
+    <Button
+        android:id="@+id/brilliancy_bt"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:padding="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25dip"
+        android:background="@drawable/app_list_corner_round"
+        android:gravity="center"
+        android:text="亮 度 传 感 器"
+        />
+    <Button
+        android:id="@+id/fog_concn_bt"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:padding="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textSize="25dip"
+        android:background="@drawable/app_list_corner_round"
+        android:gravity="center"
+        android:text="烟 雾 传 感 器"
+        />
+     <Button
+         android:id="@+id/sensors_temperature_bt"
+         android:layout_marginTop="50dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:padding="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textSize="25dip"
+         android:background="@drawable/app_list_corner_round"
+        android:gravity="center"
+        android:text="温 度 传 感 器"
+        />
+    </LinearLayout>

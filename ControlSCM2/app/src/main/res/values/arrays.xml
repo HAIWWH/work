@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="fang">
+        <item>有线</item>
+        <item>无线 </item>
+    </string-array>
+</resources>

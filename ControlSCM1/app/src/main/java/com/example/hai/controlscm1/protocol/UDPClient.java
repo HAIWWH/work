@@ -1,4 +1,4 @@
-package com.example.hai.controlscm2.UDP;
+package com.example.hai.controlscm1.protocol;
 
 /**
  * Created by Hai on 2017/11/24.
@@ -11,7 +11,7 @@ import android.util.Log;
 import com.example.hai.controlscm2.Activity.MainActivity;
 import com.example.hai.controlscm2.Protocol.Protocol;
 
-import java.io.IOException;
+import java.io.Serializable;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
@@ -19,10 +19,11 @@ import java.net.SocketException;
 import java.net.UnknownHostException;
 
 
-public class UDPClient implements Runnable {
+
+public class UDPClient implements Runnable,Serializable{
     private static int udpPort = 0;  /*服务器端端口号*/
     private static String hostIp = null; /*服务器端ip号*/
-    private static DatagramSocket socket = null;    /*码头*/
+    private static DatagramSocket socket ;    /*码头*/
     private static DatagramPacket packetSend,packetRcv; /*创建发送和接收的数据报*/
     private boolean udpLife = true; //udp生命线程
     private byte[] msgRcv = new byte[1024]; //接收消息
@@ -31,10 +32,14 @@ public class UDPClient implements Runnable {
     private Protocol protocol;
 
     /*构造函数*/
-    public UDPClient(int udpPort, String hostIp){
-       // super();
+    public UDPClient(int udpPort,String hostIp){
+        super();
         this.udpPort = udpPort;
         this.hostIp = hostIp;
+
+    }
+    public UDPClient(){
+        super();
 
     }
 
@@ -51,6 +56,7 @@ public class UDPClient implements Runnable {
     public void setUdpLife(boolean b){
         udpLife = b;
     }
+
 
     //发送消息
     public byte[] send(byte[] msgSend){
@@ -83,7 +89,7 @@ public class UDPClient implements Runnable {
 
         try {
             socket = new DatagramSocket();
-           // socket.setSoTimeout(3000);//设置超时为3s
+            socket.setSoTimeout(3000);//设置超时为3s
         } catch (SocketException e) {
             Log.i("udpClient","建立接收数据报失败");
             e.printStackTrace();
@@ -94,24 +100,24 @@ public class UDPClient implements Runnable {
             try {
                 Log.i("udpClient", "UDP监听");
                 //线程进行监听状态接收传来的数据
-                socket.receive(packetRcv);
+       //         socket.receive(packetRcv);
                 byte [] RcvMsg = packetRcv.getData();
 
                 //String RcvMsg = new String(packetRcv.getData(),packetRcv.getOffset(),packetRcv.getLength());
 
                 //调用协议进行数据处理
-                 protocol = new Protocol(RcvMsg);
+   //             protocol = new Protocol(RcvMsg);
                 String msgData = protocol.receiveProtocol();
 
                 //将收到的消息发给主界面
                 Intent RcvIntent = new Intent();
                 RcvIntent.setAction("udpRcvMsg");
                 RcvIntent.putExtra("udpRcvMsg", msgData);
-               //sendBroadcast(RcvIntent);
-                MainActivity.context.sendBroadcast(RcvIntent);
+                //sendBroadcast(RcvIntent);
+        //        MainActivity.context.sendBroadcast(RcvIntent);
 
                 Log.i("Rcv",msgData);
-            }catch (IOException e){
+            }catch (Exception e){
                 e.printStackTrace();
             }
         }

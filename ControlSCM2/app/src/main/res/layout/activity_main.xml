@@ -40,32 +40,32 @@
         android:orientation="horizontal" >
 
         <RadioButton
-            android:id="@+id/home_tab_main"
+            android:id="@+id/home_tab_action"
             style="@style/home_tab_bottom"
             android:background="@drawable/home_tab_background_selector"
             android:checked="true"
             android:drawableTop="@drawable/home_tab_main_selector" />
 
         <RadioButton
-            android:id="@+id/home_tab_search"
+            android:id="@+id/home_tab_sensors"
             style="@style/home_tab_bottom"
             android:background="@drawable/home_tab_background_selector"
             android:drawableTop="@drawable/home_tab_search_selector" />
 
         <RadioButton
-            android:id="@+id/home_tab_category"
+            android:id="@+id/home_tab_sound"
             style="@style/home_tab_bottom"
             android:background="@drawable/home_tab_background_selector"
             android:drawableTop="@drawable/home_tab_category_selector" />
 
         <RadioButton
-            android:id="@+id/home_tab_cart"
+            android:id="@+id/home_tab_location"
             style="@style/home_tab_bottom"
             android:background="@drawable/home_tab_background_selector"
             android:drawableTop="@drawable/home_tab_cart_selector" />
 
         <RadioButton
-            android:id="@+id/home_tab_personal"
+            android:id="@+id/home_tab_iconic"
             style="@style/home_tab_bottom"
             android:background="@drawable/home_tab_background_selector"
             android:drawableTop="@drawable/home_tab_personal_selector" />

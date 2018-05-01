@@ -1,6 +1,7 @@
 package com.example.hai.controlscm2.Activity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -21,12 +22,16 @@ import android.widget.FrameLayout;
 import android.widget.RadioButton;
 
 import com.example.hai.controlscm2.R;
-import com.example.hai.controlscm2.UDP.UDPClient;
-import com.example.hai.controlscm2.fragment.fiveFragment;
-import com.example.hai.controlscm2.fragment.fourFragment;
-import com.example.hai.controlscm2.fragment.oneFragment;
-import com.example.hai.controlscm2.fragment.threeFragment;
-import com.example.hai.controlscm2.fragment.twoFragment;
+
+
+import com.example.hai.controlscm2.fragment.iconicFragment;
+
+import com.example.hai.controlscm2.fragment.locationFragment;
+import com.example.hai.controlscm2.fragment.actionFragment;
+
+import com.example.hai.controlscm2.fragment.soundFragment;
+import com.example.hai.controlscm2.fragment.sensorsFragment;
+
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -46,15 +51,15 @@ public class MainActivity extends AppCompatActivity {
 
 
     /*ButterKnife插件生成*/
-    @BindView(R.id.home_tab_main)
+    @BindView(R.id.home_tab_action)
     RadioButton homeTabMain;
-    @BindView(R.id.home_tab_search)
+    @BindView(R.id.home_tab_sensors)
     RadioButton homeTabSearch;
-    @BindView(R.id.home_tab_category)
+    @BindView(R.id.home_tab_sound)
     RadioButton homeTabCategory;
-    @BindView(R.id.home_tab_cart)
+    @BindView(R.id.home_tab_location)
     RadioButton homeTabCart;
-    @BindView(R.id.home_tab_personal)
+    @BindView(R.id.home_tab_iconic)
     RadioButton homeTabPersonal;
 
     @BindView(android.R.id.tabcontent)
@@ -64,23 +69,23 @@ public class MainActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
 
 
-    @OnClick({R.id.home_tab_main, R.id.home_tab_search, R.id.home_tab_category, R.id.home_tab_cart, R.id.home_tab_personal})
+    @OnClick({R.id.home_tab_action, R.id.home_tab_sensors, R.id.home_tab_sound, R.id.home_tab_location, R.id.home_tab_iconic})
     public void onViewClicked(View view) {
         switch (view.getId()) {
-            case R.id.home_tab_main:
-                switchPages(oneFragment.TAG, oneFragment.class);
+            case R.id.home_tab_action:
+                switchPages(actionFragment.TAG, actionFragment.class);
                 break;
-            case R.id.home_tab_search:
-                switchPages(twoFragment.TAG, twoFragment.class);
+            case R.id.home_tab_sensors:
+                switchPages(sensorsFragment.TAG, sensorsFragment.class);
                 break;
-            case R.id.home_tab_category:
-                switchPages(threeFragment.TAG, threeFragment.class);
+            case R.id.home_tab_sound:
+                switchPages(soundFragment.TAG, soundFragment.class);
                 break;
-            case R.id.home_tab_cart:
-                switchPages(fourFragment.TAG, fourFragment.class);
+            case R.id.home_tab_location:
+                switchPages(locationFragment.TAG, locationFragment.class);
                 break;
-            case R.id.home_tab_personal:
-                switchPages(fiveFragment.TAG, fiveFragment.class);
+            case R.id.home_tab_iconic:
+                switchPages(iconicFragment.TAG, iconicFragment.class);
                 break;
         }
     }
@@ -113,8 +118,8 @@ public class MainActivity extends AppCompatActivity {
         //实现对fragment.TAG的初始化
         fm = getSupportFragmentManager();
         FragmentTransaction transaction = fm.beginTransaction();
-        mShowFragment = new oneFragment();
-        transaction.add(android.R.id.tabcontent, mShowFragment, oneFragment.TAG);
+        mShowFragment = new actionFragment();
+        transaction.add(android.R.id.tabcontent, mShowFragment, actionFragment.TAG);
         transaction.commit();
 
         Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
@@ -123,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
         actionBar = (getSupportActionBar());
 
         navView = (NavigationView)findViewById(R.id.nav_view);
-        navView.setCheckedItem(R.id.nav_call);
+        navView.setCheckedItem(R.id.nav_location);
     }
 
     /*事件处理*/

@@ -5,8 +5,9 @@ import android.content.Intent;
 import android.os.IBinder;
 import android.util.Log;
 
+
 import com.example.hai.controlscm2.Activity.MainActivity;
-import com.example.hai.controlscm2.UDP.UDPClient;
+import com.example.hai.controlscm2.UDP.UDPServer;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -14,29 +15,20 @@ import java.util.concurrent.Executors;
 
 public class LoginService extends Service {
 
-    public static UDPClient udpClient;
+    private UDPServer udpServer;
     public int Por;
     public String Ip;
 
-    public LoginService() {
-
-    }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         try {
 
-
-
-
             /*分别获得登录界面传来的ip和por*/
-            int por = Integer.valueOf(intent.getStringExtra("por"));
-            String ip = intent.getStringExtra("IP");
-            udpClient = new UDPClient(por,ip);
             Log.i("HAHHAH", "lalall");
-
-            Thread thread = new Thread(udpClient);
-            thread.start();
+            ExecutorService exec = Executors.newCachedThreadPool();
+            udpServer = (UDPServer)intent.getSerializableExtra("udp");
+            exec.execute(udpServer);
 
         }catch (Exception e){
 
@@ -57,11 +49,19 @@ public class LoginService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
+
+
+        /*这里的条件需要设定*/
+        Intent in = new Intent(getApplicationContext(),MainActivity.class);
+        in.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        Log.i("HAHHAH", "hahhah");
+        startActivity(in);
+
     }
 
     @Override
     public void onDestroy() {
-        udpClient.setUdpLife(false);/*关闭线程生命因子*/
         super.onDestroy();
+       // app.getUdpClient().setUdpLife(false);/*关闭线程生命因子*/
     }
 }

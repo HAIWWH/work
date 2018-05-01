@@ -1,26 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="180dp"
+    android:layout_height="300dp"
     android:padding="10dp"
-    android:background="?attr/colorPrimary">
+    android:background="#ABE3FF"
+    android:orientation="vertical">
 
+
+     <ImageView
+         android:layout_width="60dp"
+         android:layout_height="60dp"
+         android:layout_gravity="center"
+         android:src="@drawable/electrical"/>
     <TextView
-        android:id="@+id/uesername"
+        android:id="@+id/electricity_and_powersupply_tv"
+        android:layout_marginTop="20dp"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:background="@drawable/chat_edit_text"/>
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:text="tontgreendev@gmail.com"
-        android:textColor="#fff"
-        android:textSize="14sp"/>
-    <TextView
-        android:id="@+id/mail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/uesername"
-        android:text="Tony Green"
-        android:textColor="#fff"
-        android:textSize="14sp"/>
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/electricity_bt"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/app_list_corner_round"
+            android:text="获取电量"/>
+        <Button
+            android:id="@+id/get_power_supply_bt"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/app_list_corner_round"
+            android:layout_marginLeft="10dp"
+            android:text="供电方式"/>
+    </LinearLayout>
 
-</RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:orientation="horizontal">
+        <Spinner
+            android:id="@+id/power_supply_sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:entries="@array/fang"
+            style="@android:style/Widget.Spinner">
+
+        </Spinner>
+        <Button
+            android:id="@+id/set_power_supply_bt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/app_list_corner_round"
+            android:text="方式设置"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

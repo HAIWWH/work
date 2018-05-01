@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#abe3ff">
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/fog"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        />
+    <TextView
+        android:id="@+id/smoke_concentration_tv"
+        android:layout_marginTop="2dp"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#000"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:text="30"
+        android:background="@drawable/chat_edit_text"/>
+    <Button
+        android:id="@+id/get_smoke_concentration_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="获取"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/app_list_corner_round"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <SeekBar
+            android:id="@+id/set_smoke_concentration_sb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="3"
+            android:max="100"
+            android:progress="40"
+            android:layout_marginRight="10dp"
+            />
+        <Button
+            android:id="@+id/set_smoke_concentration_bt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="设置"
+            android:textSize="18sp"
+            android:textColor="#000"
+            android:background="@drawable/app_list_corner_round"
+            android:layout_marginRight="20dp"/>
+    </LinearLayout>
+
+</LinearLayout>
