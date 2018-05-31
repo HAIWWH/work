@@ -1,10 +1,18 @@
 package com.example.hai.controlscm2.fragment;
 
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +23,9 @@ import com.example.hai.controlscm2.Activity.SensorsFogConcnActivity;
 import com.example.hai.controlscm2.Activity.SensorsRangeFindingActivity;
 import com.example.hai.controlscm2.Activity.SensorsTemperatureActivity;
 import com.example.hai.controlscm2.R;
+import com.example.hai.controlscm2.UDP.UdpSend;
+
+import java.lang.ref.WeakReference;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -25,7 +36,7 @@ import butterknife.Unbinder;
  * Created by Hai on 2018/3/15.
  */
 
-public class sensorsFragment extends Fragment {
+public class sensorsFragment extends BaseFragment {
 
     public static final String TAG = "sensorsFragment";
 
@@ -78,4 +89,13 @@ public class sensorsFragment extends Fragment {
     }
 
 
+    @Override
+    public void initView() {
+
+    }
+
+    @Override
+    public void setupListeners() {
+
+    }
 }

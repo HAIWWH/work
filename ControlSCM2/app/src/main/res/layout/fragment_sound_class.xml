@@ -27,12 +27,13 @@
         android:layout_marginTop="10dp">
 
         <ImageButton
-            android:id="@+id/show_down_bt"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@android:drawable/ic_media_rew"/>
 
         <ImageButton
+            android:id="@+id/show_down_bt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@android:drawable/ic_media_play"

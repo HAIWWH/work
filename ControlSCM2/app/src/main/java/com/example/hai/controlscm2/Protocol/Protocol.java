@@ -4,10 +4,10 @@ package com.example.hai.controlscm2.Protocol;
  * Created by Hai on 2017/12/16.
  */
 
-
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
+
 
 public class Protocol {
 
@@ -19,11 +19,19 @@ public class Protocol {
 	private static short DATA_LENGTH;//数据长度（接收和发送公有的）
 	private static short PARAMETER = 0;//参数（发送独有）
 
+	private byte R_LOWER_COMPUTER_ID;
+	private byte R_DEVICE_CLASS;
+	private byte R_DEVICE;
+	private byte R_DEVICE_ID;
+
 	private static byte LOWER_COMPUTER_ID;//下位机编号(接收独有)
 	private static String RECEIVE_DATA;//接收的数据（接收独有）
 
-
+	private static byte[] R_Data;
 	private static byte[] DATA;
+
+
+	private ReceiveData receiveData;
 
 	public Protocol(int DEVICE_CLASS, int DEVICE, int DEVICE_ID, int DEVICE_CONTROL_ID) {  /*数据段没有参数的报文构造函数*/
 		Protocol.DEVICE_CLASS = (byte) DEVICE_CLASS;
@@ -44,22 +52,21 @@ public class Protocol {
 
 	}
 	public Protocol(byte[] msg){ /*当接收到数据后的处理*/
-		Protocol.LOWER_COMPUTER_ID = msg[6];
-		Protocol.DEVICE_CLASS = msg[7];
-		Protocol.DEVICE = msg[8];
-		Protocol.DEVICE_ID = msg[9];
-		Protocol.DEVICE_CONTROL_ID = msg[10];
-
-		byte[] b =  null;
-		System.arraycopy(DATA,5,b,0,DATA.length-5);
-		Protocol.RECEIVE_DATA = b.toString();
+		this.R_LOWER_COMPUTER_ID = msg[6];
+		this.R_DEVICE_CLASS = msg[7];
+		this.R_DEVICE = msg[8];
+		this.R_DEVICE_ID = msg[9];
+		this.DEVICE_CONTROL_ID = msg[10];
+		System.arraycopy(msg,7,R_Data,0,msg.length-7);
+		Protocol.RECEIVE_DATA = R_Data.toString();
 
 	}
 
 
 
-	public byte[] sendProtocol()  { /*发送时调用此方法*/
+	public String sendProtocol()  { /*发送时调用此方法*/
 		byte[] Msg = Protocol_head.getHEAD();
+
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 		DataOutputStream headSB = new DataOutputStream(baos);
 
@@ -80,87 +87,132 @@ public class Protocol {
 			}
 		}
 
-		return Msg;
+		return Msg.toString();
 	}
 
-	public String receiveProtocol() {/*接收时调用此方法*/
-		int deviceClass = DEVICE_CLASS; /*设备大类*/
-		int device =  DEVICE;/*具体类*/
-		int deviceControlId = DEVICE_CONTROL_ID;/*设备控制号*/
-		String msgData = null; /*换回的数据*/
-		StringBuffer sb = new StringBuffer(); /*字符串流*/
 
-		/*传感器界面*/
-		if(deviceClass == 0){
-			sb.append(0);/*在字符串头加入一个数字主要是为了判断哪一个界面来接收（传感器界面）*/
-			switch (device){
-				case 0:/*测距传感器*/
-					break;
-				case 1:/*亮度传感器*/
-					if(deviceControlId == 0){
-						sb.append(4);/*设置message.what的值*/
-						sb.append(RECEIVE_DATA);/*传入真实要显示的数据*/
-					}else{
-						//后续完成
-					}
-					break;
-				case 2:/*烟雾传感器*/
-					if(deviceControlId == 0){
-						sb.append(5);/*设置message.what的值*/
-						sb.append(RECEIVE_DATA);/*传入真实要显示的数据*/
-					}else{
-						//后续完成
-					}
-					break;
-				case 3:/*温湿度传感器*/
-					if(deviceControlId == 0){
-						sb.append(6);/*设置message.what的值*/
-						sb.append(RECEIVE_DATA);/*传入真实要显示的数据*/
-					}else if(deviceControlId == 1)
-					{
-						sb.append(7);/*设置message.what的值*/
-						sb.append(RECEIVE_DATA);/*传入真实要显示的数据*/
-					} else{
-						//后续完成
-					}
-					break;
-				default:
-					break;
-			}
-			msgData = sb.toString();/*将接收到的数据转换成字符串*/
-		}
-
-
-		/*小车界面(未完成)*/
-		else if(deviceClass >0 && deviceClass <= 2 ){
-			sb.append(1);/*在字符串头加入一个数字主要是为了判断哪一个界面来接收（小车界面）*/
-			switch(device){
-				case 0:
-
-					break;
-				default:
-					break;
-			}
-			msgData = sb.toString();/*将接收到的数据转换成字符串*/
-		}
-
-
-		/*GPS和电量界面(未完成)*/
-		else if(deviceClass >2 && deviceClass <= 5){
-			sb.append(2);/*在字符串头加入一个数字主要是为了判断哪一个界面来接收（GPS和电量界面）*/
-			switch (device){
-				case 0:
-
-					break;
-				default:
-					break;
-			}
-			msgData = sb.toString();/*将接收到的数据转换成字符串*/
-		}else{
-
-		}
-
-		return msgData;
+	public ReceiveData receiveProtocol() {/*接收时调用此方法*/
+//		int deviceClass = DEVICE_CLASS; /*设备大类*/
+//		int device =  DEVICE;/*具体类*/
+//		int deviceControlId = DEVICE_CONTROL_ID;/*设备控制号*/
+//		String msgData = null; /*换回的数据*/
+//
+//		StringBuffer sb = new StringBuffer(); /*字符串流*/
+//
+//		switch(deviceClass){
+//
+//			case 0: /*传感器类*/
+//				sb.append(0);/*在字符串头加入一个数字主要是为了判断哪一个界面来接收*/
+//				switch (device){
+//					case 0:/*测距传感器*/
+//						break;
+//					case 1:/*亮度传感器*/
+//						if(deviceControlId == 0){
+//							sb.append(4);/*设置message.what的值*/
+//							sb.append(RECEIVE_DATA);/*传入真实要显示的数据*/
+//						}else{
+//							//后续完成
+//						}
+//						break;
+//					case 2:/*烟雾传感器*/
+//						if(deviceControlId == 0){
+//							sb.append(5);/*设置message.what的值*/
+//							sb.append(RECEIVE_DATA);/*传入真实要显示的数据*/
+//						}else{
+//							//后续完成
+//						}
+//						break;
+//					case 3:/*温湿度传感器*/
+//						if(deviceControlId == 0){
+//							sb.append(6);/*设置message.what的值*/
+//							sb.append(RECEIVE_DATA);/*传入真实要显示的数据*/
+//						}else if(deviceControlId == 1)
+//						{
+//							sb.append(7);/*设置message.what的值*/
+//							sb.append(RECEIVE_DATA);/*传入真实要显示的数据*/
+//						} else{
+//							//后续完成
+//						}
+//						break;
+//					default:
+//						break;
+//				}
+//				msgData = sb.toString();/*将接收到的数据转换成字符串*/
+//				break;
+//
+//
+//			case 1: /*动作类*/
+//				sb.append(1);/*在字符串头加入一个数字主要是为了判断哪一个界面来接收*/
+//				switch(device){
+//					case 0:
+//
+//						break;
+//					default:
+//						break;
+//				}
+//				msgData = sb.toString();/*将接收到的数据转换成字符串*/
+//				break;
+//
+//
+//			case 2:/*声音类*/
+//				sb.append(2);/*在字符串头加入一个数字主要是为了判断哪一个界面来接收*/
+//				switch(device){
+//					case 0:
+//
+//						break;
+//					default:
+//						break;
+//				}
+//				msgData = sb.toString();/*将接收到的数据转换成字符串*/
+//				break;
+//
+//
+//			case 3:/*图像类*/
+//				sb.append(3);/*在字符串头加入一个数字主要是为了判断哪一个界面来接收*/
+//				switch(device){
+//					case 0:
+//
+//						break;
+//					default:
+//						break;
+//				}
+//				msgData = sb.toString();/*将接收到的数据转换成字符串*/
+//				break;
+//
+//
+//			case 4:/*电源类*/
+//				sb.append(4);/*在字符串头加入一个数字主要是为了判断哪一个界面来接收*/
+//				switch(device){
+//					case 0:
+//
+//						break;
+//					default:
+//						break;
+//				}
+//				msgData = sb.toString();/*将接收到的数据转换成字符串*/
+//				break;
+//
+//
+//			case 5: /*定位类*/
+//				sb.append(5);/*在字符串头加入一个数字主要是为了判断哪一个界面来接收*/
+//				switch(device){
+//					case 0:
+//
+//						break;
+//					default:
+//						break;
+//				}
+//				msgData = sb.toString();/*将接收到的数据转换成字符串*/
+//				break;
+//		}
+		receiveData = new ReceiveData();
+		receiveData.setR_LOWER_COMPUTER_ID(R_LOWER_COMPUTER_ID);
+		receiveData.setR_DEVICE_CLASS(R_DEVICE_CLASS);
+		receiveData.setR_DEVICE(R_DEVICE);
+		receiveData.setR_DEVICE_ID(R_DEVICE_ID);
+		receiveData.setDEVICE_CONTROL_ID(DEVICE_CONTROL_ID);
+		receiveData.setRECEIVE_DATA(RECEIVE_DATA);
+		return receiveData;
 	}
 
 
@@ -221,7 +273,7 @@ public class Protocol {
 			headSB.writeByte(DEVICE);//向流里面追加具体设备
 			headSB.writeByte(DEVICE_ID);//向流里面追加设备ID
 			headSB.writeByte(DEVICE_CONTROL_ID);//向流里面追加设备控制号
-			headSB.writeShort(PARAMETER);//向流里面追加数据
+			headSB.writeShort(PARAMETER);//向流里面追加参数
 
 			DATA = baos.toByteArray();
 		} catch (Exception e) {
@@ -277,8 +329,6 @@ public class Protocol {
 				// 报文序列号超出最大值
 			}
 
-
-
 			ByteArrayOutputStream baos = new ByteArrayOutputStream();
 			DataOutputStream headSB = new DataOutputStream(baos);
 
@@ -299,7 +349,6 @@ public class Protocol {
 					e.printStackTrace();
 				}
 			}
-
 			return HEAD;
 		}
 	}

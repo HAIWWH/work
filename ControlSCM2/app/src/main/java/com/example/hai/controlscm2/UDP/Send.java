@@ -11,9 +11,9 @@ import android.util.Log;
 import com.example.hai.controlscm2.MyApplication;
 
 public class Send {
-    private  int SERVER_PORT = 10000;
+    private static int SERVER_PORT ;
     private DatagramSocket dSocket = null;
-    private  String ip = "192.168.58.1";
+    private static String ip;
     private String msg;
     private MyApplication app;
     public Send(String msg ) {
@@ -21,16 +21,31 @@ public class Send {
         this.msg = msg;
     }
 
+    public int getSERVER_PORT() {
+        return SERVER_PORT;
+    }
+
+    public static void setSERVER_PORT(int SERVER_PORT) {
+        Send.SERVER_PORT = SERVER_PORT;
+    }
+
+    public String getIp() {
+        return ip;
+    }
+
+    public static void setIp(String ip) {
+        Send.ip = ip;
+    }
+
+
     public String send() {
-//        ip = app.getIp();
-//        SERVER_PORT = app.getPor();
-
-
         StringBuilder sb = new StringBuilder();
         InetAddress local = null;
+//        String string = ip;
+//        int i = SERVER_PORT;
 
         try {
-            local = InetAddress.getByName("255.255.255.255"); // 本机测试
+            local = InetAddress.getByName(ip); // 本机测试
             sb.append("已找到服务器,连接中...").append("/n");
         } catch (UnknownHostException e) {
             sb.append("未找到服务器.").append("/n");

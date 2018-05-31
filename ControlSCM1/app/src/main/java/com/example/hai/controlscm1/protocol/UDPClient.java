@@ -8,9 +8,6 @@ import android.content.Intent;
 import android.util.Log;
 
 
-import com.example.hai.controlscm2.Activity.MainActivity;
-import com.example.hai.controlscm2.Protocol.Protocol;
-
 import java.io.Serializable;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;

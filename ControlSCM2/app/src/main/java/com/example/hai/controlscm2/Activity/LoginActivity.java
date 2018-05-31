@@ -7,14 +7,14 @@ import android.os.Bundle;
 
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.hai.controlscm2.MyApplication;
 import com.example.hai.controlscm2.R;
 import com.example.hai.controlscm2.Service.LoginService;
-import com.example.hai.controlscm2.UDP.UDPServer;
+import com.example.hai.controlscm2.UDP.Send;
 
 
 import butterknife.BindView;
@@ -22,7 +22,8 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class LoginActivity extends AppCompatActivity {
-    private UDPServer udpServer;
+
+
     @BindView(R.id.ip_et)
     EditText ipEt;
     @BindView(R.id.por_et)
@@ -43,20 +44,19 @@ public class LoginActivity extends AppCompatActivity {
             case R.id.login_button:
                 if (!ipEt.getText().toString().isEmpty() && !porEt.getText().toString().isEmpty()) {
                     int mPort = Integer.parseInt(porEt.getText().toString());
-                    MyApplication app = (MyApplication)getApplication();
                     String ip = ipEt.getText().toString();
-                    app.setIp(ip);
-                    app.setPor(mPort);
+                    Send.setIp(ip);
+                    Send.setSERVER_PORT(mPort);
+
                     /*这里的条件需要设定*/
 
                     Intent in = new Intent(this, LoginService.class);
                     in.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    in.putExtra("udp", udpServer);
-//                    in.putExtra("IP",ipEt.getText().toString());
-//                    in.putExtra("POR",mPort);
-//                    Log.i("HAHHAH", "hahhah");
+                    in.putExtra("IP",ipEt.getText().toString());
+                    in.putExtra("POR",porEt.getText().toString());
+                    Log.i("HAHHAH", "hahhah");
                     this.startService(in);
-
+                    finish();
 
                 }else{
                     AlertDialog.Builder builder = new AlertDialog.Builder(this);

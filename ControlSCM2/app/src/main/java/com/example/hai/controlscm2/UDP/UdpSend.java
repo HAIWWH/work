@@ -11,6 +11,10 @@ public class UdpSend implements Runnable {
         this.msg = msg;
     }
 
+    public UdpSend() {
+
+    }
+
     public String getSendInfo() {
         return sendInfo;
     }
